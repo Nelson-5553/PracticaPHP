@@ -43,7 +43,7 @@ curl_close($ch);
             </hgroup>
         </section>
         <br>
-        <h1>Descripcion</h1>
+        <h1>Descripción</h1>
         <section>
             <p><?= $data["overview"]?></p>
         </section>
