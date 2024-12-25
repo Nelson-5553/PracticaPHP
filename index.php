@@ -14,12 +14,19 @@ $outputAge = match (true) {
     $age <= 10 => "Eres un niño, $name 👦",
     $age <= 18 => "Eres un ADOLECENTE, $name 👦",
     $age <= 30 => "Eres un VIEJO, $name 👴",
+    $age <= 50 => "Eres un VIEJO, $name 👴",
     default => "TAS GRANDE"
 };
 
 $bestLanguages = ["Php", "JavaScript", "Pyton", 1, 2,];
-$bestLanguages[3] = "Java" ;
-$bestLanguages[] = "Ruby" ;
+$bestLanguages[3] = "Java";
+$bestLanguages[] = "Ruby";
+
+$persona= [
+    "nombre" => "Nelson",
+    "edad" => 12,
+    "pais" => "Colombia"
+];
 
 
 // var_dump($name); //Tipo de variable
@@ -28,25 +35,28 @@ $bestLanguages[] = "Ruby" ;
 ?>
 
 <h1> El mejor lenguaje <?= $bestLanguages[5] ?>
-<?php foreach ($bestLanguages as $Lenguajes) : ?>
-    <li> <?= $Lenguajes ?> </li>
+    <br>
+    <?php foreach ($bestLanguages as $key => $Lenguajes) : ?>
+        <li> <?= $key . " " . $Lenguajes ?> </li>
     <?php endforeach; ?>
-<br>
-<?= $outputAge; // concatenacion ?>
+    <br>
+    <?= $outputAge; // concatenacion 
+    ?>
 
-<br>
-<img src="<?= LOGO_URL ?>" alt="php logo" width="200">
-<h1>
-    <?= $output // concatenacion ?>
-</h1>
+    <br>
+    <img src="<?= LOGO_URL ?>" alt="php logo" width="200">
+    <h1>
+        <?= $output // concatenacion 
+        ?>
+    </h1>
 
-<style>
-    :root {
-        color-scheme: light dark;
-    }
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
 
-    body {
-        display: grid;
-        place-content: center;
-    }
-</style>
+        body {
+            display: grid;
+            place-content: center;
+        }
+    </style>
